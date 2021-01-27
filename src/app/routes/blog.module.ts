@@ -3,12 +3,14 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { ArticleComponent } from './article/article.component';
-import { ArticleListComponent } from './article-list/article-list.component';
+import { ArticleComponent } from '../pages/article/article.component';
+import { ArticleListComponent } from '../pages/article-list/article-list.component';
+import { HomepageComponent } from '../pages/homepage/homepage.component';
 
 // 定义的路由
 const routes: Routes = [
-  { path: '', redirectTo: 'article-list' },
+  { path: '', redirectTo: 'homepage' },
+  { path: 'homepage', component: HomepageComponent },
   { path: 'article-list', component: ArticleListComponent },
   { path: 'article/:id', component: ArticleComponent }
 ];
@@ -22,6 +24,7 @@ const routes: Routes = [
   ],
   // 路由中使用了的component要在这里declaration
   declarations: [
+    HomepageComponent,
     ArticleComponent,
     ArticleListComponent
   ]

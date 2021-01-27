@@ -1,5 +1,5 @@
 import { LayoutComponent } from '../layout/layout.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { PageNotFoundComponent } from '../pages/page-not-found/page-not-found.component';
 
 export const Routes = [
     {
@@ -13,7 +13,7 @@ export const Routes = [
             },
             {
                 path: 'blog',
-                loadChildren: () => import('./blog/blog.module').then(m => m.BlogModule)
+                loadChildren: () => import('./blog.module').then(m => m.BlogModule)
             }
         ]
     },

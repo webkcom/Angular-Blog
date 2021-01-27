@@ -4,7 +4,6 @@ import { RouterModule } from '@angular/router';
 import { Routes } from './routes';
 
 import { LayoutModule } from '../layout/layout.module';
-// import { PageNotFoundComponent } from '../share/page-not-found/page-not-found.component';
 
 @NgModule({
     imports: [
